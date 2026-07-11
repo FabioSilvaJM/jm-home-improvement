@@ -456,36 +456,61 @@ nav a {
 /* Small mobile phones */
 @media (max-width: 480px) {
 
-    nav {
-        align-items: center;
-    }
+    @media (max-width: 768px) {
 
-    nav ul {
-        gap: 8px 12px;
-    }
+        nav {
+            flex-direction: column;
+            padding: 12px 10px;
+            gap: 15px;
+        }
 
-    nav a {
-        font-size: 13px;
-    }
+        nav ul {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+        }
 
-    .hero {
-        min-height: 580px;
-        padding: 55px 14px;
-    }
+        nav li {
+            margin-left: 0;
+        }
 
-    .hero h1 {
-        font-size: 42px;
-    }
+        nav a {
+            font-size: 14px;
+            white-space: nowrap;
+        }
 
-    .hero p {
-        font-size: 16px;
-    }
 
-    .features {
-        grid-template-columns: 1fr;
-    }
+        .hero {
+            min-height: 580px;
+            padding: 55px 14px;
+        }
 
-    .services h2 {
-        font-size: 34px;
-    }
-}
+        .hero h1 {
+            font-size: 42px;
+        }
+
+        .hero p {
+            font-size: 16px;
+        }
+
+        .features {
+            grid-template-columns: 1fr;
+        }
+
+        .services h2 {
+            font-size: 34px;
+        }
+
+        @media (max-width: 480px) {
+
+            nav ul {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
