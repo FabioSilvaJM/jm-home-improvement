@@ -522,9 +522,12 @@ nav a {
     .menu-toggle {
         display: block;
         position: absolute;
-        top: 20px;
+        top: 15px;
+        width: 40px;
+        height: 40px;
         right: 20px;
         z-index: 1000;
+
     }
 
     nav {
