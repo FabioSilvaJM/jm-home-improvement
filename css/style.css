@@ -454,121 +454,122 @@ nav a {
 
 
 /* Small mobile phones */
-@media (max-width: 480px) {
+@media (max-width: 480px) @media (max-width: 768px) nav {
+    flex-direction: column;
+    padding: 12px 10px;
+    gap: 15px;
+}
 
-    @media (max-width: 768px) {
+nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
 
-        nav {
-            flex-direction: column;
-            padding: 12px 10px;
-            gap: 15px;
-        }
+nav li {
+    margin-left: 0;
+}
 
-        nav ul {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: center;
-            align-items: center;
-            gap: 18px;
-        }
-
-        nav li {
-            margin-left: 0;
-        }
-
-        nav a {
-            font-size: 14px;
-            white-space: nowrap;
-        }
+nav a {
+    font-size: 14px;
+    white-space: nowrap;
+}
 
 
-        .hero {
-            min-height: 580px;
-            padding: 55px 14px;
-        }
+.hero {
+    min-height: 580px;
+    padding: 55px 14px;
+}
 
-        .hero h1 {
-            font-size: 42px;
-        }
+.hero h1 {
+    font-size: 42px;
+}
 
-        .hero p {
-            font-size: 16px;
-        }
+.hero p {
+    font-size: 16px;
+}
 
-        .features {
-            grid-template-columns: 1fr;
-        }
+.features {
+    grid-template-columns: 1fr;
+}
 
-        .services h2 {
-            font-size: 34px;
-        }
+.services h2 {
+    font-size: 34px;
+}
 
-        @media (max-width: 480px) {
+@media (max-width: 480px) nav ul {
+    gap: 10px;
+}
 
-            nav ul {
-                gap: 10px;
-            }
+nav a {
+    font-size: 12px;
+}
 
-            nav a {
-                font-size: 12px;
-            }
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+}
 
-            .menu-toggle {
-                display: none;
-                background: none;
-                border: none;
-                color: white;
-                font-size: 32px;
-                cursor: pointer;
-            }
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
 
-            @media (max-width: 768px) {
+    nav {
+        position: relative;
+        flex-direction: row;
+        padding: 12px 16px;
+    }
 
-                nav {
-                    position: relative;
-                    flex-direction: row;
-                    padding: 12px 16px;
-                }
+    .logo img {
+        max-width: 300px;
+    }
 
-                .logo img {
-                    max-width: 300px;
-                }
+    .menu-toggle {
+        display: none;
+        margin-left: auto;
+    }
 
-                .menu-toggle {
-                    display: block;
-                    margin-left: auto;
-                }
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #050505;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 15px 0;
+        z-index: 999;
+    }
 
-                nav ul {
-                    display: none;
-                    position: absolute;
-                    top: 100%;
-                    left: 0;
-                    width: 100%;
-                    background: #050505;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 0;
-                    padding: 15px 0;
-                    z-index: 999;
-                }
+    nav ul.active {
+        display: flex;
+    }
 
-                nav ul.active {
-                    display: flex;
-                }
+    nav li {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
 
-                nav li {
-                    width: 100%;
-                    margin: 0;
-                    text-align: center;
-                }
-
-                nav a {
-                    display: block;
-                    width: 100%;
-                    padding: 14px;
-                    font-size: 17px;
-                }
-            }
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 14px;
+        font-size: 17px;
+    }
+}
