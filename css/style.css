@@ -48,6 +48,20 @@ nav li {
 nav a {
     color: white;
     text-decoration: none;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+}
+
+
+@media (min-width: 769px) {
+    nav a {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    nav li {
+        margin-left: 40px;
+    }
 }
 
 .hero {
@@ -648,5 +662,229 @@ nav a {
         display: grid !important;
         grid-template-columns: 1fr !important;
         gap: 20px;
+    }
+}
+
+/* MENU MAIOR APENAS NO COMPUTADOR */
+@media screen and (min-width: 769px) {
+    nav .nav-menu a {
+        font-size: 20px !important;
+        font-weight: 600 !important;
+    }
+
+    nav .nav-menu {
+        gap: 35px !important;
+    }
+
+    nav .nav-menu li {
+        margin-left: 0 !important;
+    }
+}
+
+/* ABOUT SECTION */
+
+.about {
+    padding: 80px 20px;
+    background: #ffffff;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-image,
+.about-content {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.section-subtitle {
+    display: inline-block;
+    color: #c99a21;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.about-content h2 {
+    color: #20242b;
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 50px;
+
+}
+
+.about-content p {
+    color: #555555;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.about-benefits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 25px 0;
+    gap: 10px;
+}
+
+.about-benefits p {
+    color: #20242b;
+    font-weight: 600;
+    margin: 0;
+}
+
+.about-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #d4aa22;
+    color: #171717;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.about-button:hover {
+    background: #b88d14;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 55px 20px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .about-image img {
+        height: 320px;
+    }
+
+    .about-content h2 {
+        font-size: 29px;
+    }
+
+    .about-benefits {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CORREÇÃO DA SECÇÃO ABOUT */
+
+.about {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 80px 30px;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+.about-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.about-image {
+    width: 50%;
+    flex: 0 0 50%;
+}
+
+.about-content {
+    width: 50%;
+    flex: 0 0 50%;
+}
+
+.about-image img {
+    width: 100%;
+    height: 480px;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 50px 20px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-image,
+    .about-content {
+        width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .about-image img {
+        height: 300px;
+    }
+}
+
+/* ABOUT NO CELULAR */
+
+@media (max-width: 768px) {
+    .about {
+        display: block !important;
+        width: 100% !important;
+        padding: 45px 20px !important;
+        overflow: visible !important;
+    }
+
+    .about-container {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 30px !important;
+    }
+
+    .about-image,
+    .about-content {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: none !important;
+    }
+
+    .about-image img {
+        display: block !important;
+        width: 100% !important;
+        height: 280px !important;
+        object-fit: cover !important;
+    }
+
+    .about-content h2 {
+        font-size: 30px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 25px !important;
+    }
+
+    .about-content p {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
     }
 }
