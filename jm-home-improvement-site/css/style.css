@@ -419,3 +419,54 @@ nav a {
         height: 240px;
     }
 }
+
+/* TAMANHO DAS FOTOS DA GALLERY */
+
+.gallery-page {
+    min-height: 100vh;
+    padding: 110px 20px 60px;
+    background: #ffffff;
+}
+
+.gallery-page .gallery-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-page .gallery-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+    margin-top: 35px;
+}
+
+.gallery-page .gallery-item {
+    width: 100% !important;
+    height: 250px !important;
+    overflow: hidden !important;
+    border-radius: 8px;
+}
+
+.gallery-page .gallery-item img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+@media (max-width: 768px) {
+    .gallery-page {
+        padding: 90px 15px 40px;
+    }
+
+    .gallery-page .gallery-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .gallery-page .gallery-item {
+        height: 230px !important;
+    }
+}
