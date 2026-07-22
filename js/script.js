@@ -59,3 +59,38 @@ function sendContactBySMS() {
     window.location.href =
         `sms:+447403474855?body=${encodeURIComponent(smsMessage)}`;
 }
+const galleryImages = document.querySelectorAll(".gallery-item img");
+const galleryLightbox = document.getElementById("galleryLightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+const lightboxClose = document.querySelector(".lightbox-close");
+
+if (galleryLightbox && lightboxImage && lightboxClose) {
+    galleryImages.forEach((image) => {
+        image.addEventListener("click", () => {
+            lightboxImage.src = image.src;
+            lightboxImage.alt = image.alt;
+            galleryLightbox.classList.add("active");
+            document.body.style.overflow = "hidden";
+        });
+    });
+
+    function closeGalleryLightbox() {
+        galleryLightbox.classList.remove("active");
+        document.body.style.overflow = "";
+        lightboxImage.src = "";
+    }
+
+    lightboxClose.addEventListener("click", closeGalleryLightbox);
+
+    galleryLightbox.addEventListener("click", (event) => {
+        if (event.target === galleryLightbox) {
+            closeGalleryLightbox();
+        }
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeGalleryLightbox();
+        }
+    });
+}
