@@ -649,3 +649,57 @@ nav a {
     background-color: #d4aa22 !important;
     color: #171717 !important;
 }
+
+.nav-menu .social-link a {
+    color: #d4aa22;
+    font-weight: 700;
+}
+
+.nav-menu .social-link a:hover {
+    color: #ffffff;
+}
+
+.social-link a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.social-link i {
+    font-size: 16px;
+}
+
+.facebook-link i {
+    color: #1877F2;
+}
+
+.instagram-link i {
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.social-link a:hover {
+    opacity: 0.85;
+}
+
+.social-link a {
+    padding: 6px 10px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.facebook-link a {
+    background: rgba(24, 119, 242, 0.12);
+}
+
+.instagram-link a {
+    background: rgba(221, 42, 123, 0.12);
+}
+
+.social-link a:hover {
+    transform: translateY(-1px);
+}
